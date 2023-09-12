@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+    <header>
+        <h1 class="h11"><a href="./index.html">Temperature Converter</h1></a>
+    </header>
+    <div class="IMAGE">
+        <img src="TEMP.jpg" alt="">
+    </div>
+    
+    <section id="sec">
+    <div class="box">
+        <h1 class="h12">
+          Temperature converter</h1>
+        <div class="inputbox">
+          <input type="number" id="degree"/>
+          <select id="temp">
+            <br>
+            <option></option>
+            <option value="cel">Celcius</option>
+            <option value="far">Farenheit</option>
+          </select>
+          <br />
+          <br />
+          <div class="submit">
+            <center>
+              <button
+                type="button"
+                onclick="k(document.getElementById('degree').value)" class="butt"
+              >Convert
+              </button>
+            </center>
+          </div>
+          <h4>Tempertaure Value:</h4>
+          <p id="display" ></p>
+        </div>
+      </div>
+    </section>
+      <script>
+        function k(l) {
+          var x = document.getElementById("temp").value;
+          var h = 0;
+          if (x == "cel") {
+            h = l * (9 / 5) + 32;
+          } else {
+            h = (l - 32) * (5 / 9);
+          }
+          document.getElementById("display").innerHTML = h;
+        }
+      </script>
+    
+</body>
+</html>
